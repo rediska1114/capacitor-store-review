@@ -1,3 +1,22 @@
+/// <reference types="@capacitor/cli" />
+
+declare module '@capacitor/cli' {
+  export interface PluginsConfig {
+    /**
+     * These config values are available:
+     */
+    StoreReview: {
+      /**
+       * iTunes App ID.
+       *
+       * @example 1545567249
+       */
+      appId: string | number;
+    };
+  }
+}
+
 export interface StoreReviewPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  navigateToAppStore(): Promise<void>;
+  promtForRating(): Promise<void>;
 }

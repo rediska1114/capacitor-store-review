@@ -2,9 +2,14 @@ import { registerPlugin } from '@capacitor/core';
 
 import type { StoreReviewPlugin } from './definitions';
 
-const StoreReview = registerPlugin<StoreReviewPlugin>('StoreReview', {
-  web: () => import('./web').then(m => new m.StoreReviewWeb()),
-});
+const CapacitorStoreReview = registerPlugin<StoreReviewPlugin>(
+  'StoreReview',
+  {},
+);
+
+export class StoreReview {
+  navigateToAppStore = CapacitorStoreReview.navigateToAppStore;
+  promtForRating = CapacitorStoreReview.promtForRating;
+}
 
 export * from './definitions';
-export { StoreReview };
