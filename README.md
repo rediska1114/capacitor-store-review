@@ -56,3 +56,6 @@ export class AppComponent {
 ```
 
 // TODO docs
+
+## BREAKING CHANGES in 1.x.x version
+ - Added support for Capacitor 5 and removed compatibility with Capacitor 3

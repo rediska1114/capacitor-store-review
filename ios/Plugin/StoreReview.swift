@@ -5,7 +5,7 @@ import StoreKit
     @objc public func navigateToAppStore(_ appId: String, completionHandler: @escaping (_: Bool) -> Void) {
         guard let writeReviewURL = URL(string: "https://itunes.apple.com/app/id" + appId + "?action=write-review")
         else {
-            print("Invalid app id")
+            print("[StoreReview] — Invalid app id")
 
             return completionHandler(false)
         }
