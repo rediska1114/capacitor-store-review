@@ -2,12 +2,11 @@
 
 Store Review capacitor plugin
 
-Currently only works on ios, but android support will be coming soon
 
 # Available methods:
 
 - `navigateToAppStore(): Promise<void>`
-- `promtForRating(): Promise<void>`
+- `requestReview(): Promise<void>`
 
 # Usage example:
 
@@ -49,7 +48,7 @@ export class AppComponent {
 	constructor(private storeReview: StoreReview) {}
 
     someUserAction() {
-        this.storeReview.promtForRating()
+        this.storeReview.requestReview()
     }
 }
 

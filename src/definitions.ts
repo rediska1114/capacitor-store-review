@@ -18,5 +18,5 @@ declare module '@capacitor/cli' {
 
 export interface StoreReviewPlugin {
   navigateToAppStore(): Promise<void>;
-  promtForRating(): Promise<void>;
+  requestReview(): Promise<void>;
 }

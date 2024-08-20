@@ -9,7 +9,12 @@ const CapacitorStoreReview = registerPlugin<StoreReviewPlugin>(
 
 export class StoreReview {
   navigateToAppStore = CapacitorStoreReview.navigateToAppStore;
-  promtForRating = CapacitorStoreReview.promtForRating;
+  requestReview = CapacitorStoreReview.requestReview;
+
+  /**
+   * @deprecated Use `requestReview` instead.
+   */
+  promtForRating = CapacitorStoreReview.requestReview;
 }
 
 export * from './definitions';
